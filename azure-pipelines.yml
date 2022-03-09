@@ -24,6 +24,6 @@ stages:
         displayName: Build and Push image
         inputs:
           containerRegistry: 'Docker Hub Connection'
-          repository: 'k8sExample'
+          repository: 'raghukom/k8sExample'
           command: 'buildAndPush'
           Dockerfile: '**/KubernetesExample/Dockerfile'
