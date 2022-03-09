@@ -20,10 +20,10 @@ stages:
     pool:
       name: Test
     steps:
-    - task: Docker@2
-      displayName: Build an image
-      inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/KubernetesExample/Dockerfile'
-        tags: |
-          $(tag)
+      - task: Docker@2
+        displayName: Build and Push image
+        inputs:
+          containerRegistry: 'Docker Hub Connection'
+          repository: 'k8sExample'
+          command: 'buildAndPush'
+          Dockerfile: '**/KubernetesExample/Dockerfile'
