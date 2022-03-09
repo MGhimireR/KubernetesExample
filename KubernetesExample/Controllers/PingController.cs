@@ -23,7 +23,7 @@ namespace KubernetesExample.Controllers
         public ActionResult Get()
         {
 
-            return Ok("Server is Healthy");
+            return Ok("Server is Up and Running");
         }
     }
 }
